@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Goblin Shooter | Daniel's Software</title>
+		<link rel="stylesheet" type="text/css" href="styles/style.css"/>
+		<link rel="shortcut icon" href="images/icon.png"/>
+	</head>
+	<body>
+		<div id="container">
+			<div id="header">
+				<h1>Daniel's Software</h1>
+			</div>
+			<div id="content">
+				<div id="navigation">
+					<ul>
+						<a href="index.html"><li>Intro</li></a>
+						<a href="projectile2017.html"><li>Projectile 2017</li></a>
+						<a href="card-bomber.html"><li>Card Bomber App</li></a>
+						<a href="goblin-shooter.html"><li class="selected">Goblin Shooter</li></a>
+						<a href="grass-editor.html"><li>Clash of Clans Grass Editor</li></a>
+						<a href="pokemon-intro.html"><li>Pokemon Team Type Calculator</li></a>
+					</ul>
+				</div>
+				<div id="main">
+					<h2>Goblin Shooter</h2>
+					<img src="images/GoblinShooterMenu.png"/>
+					<p>This is a simple 2D platforming and shooting game created using Python with the Pygame library. The player character is moved using WSAD or arrow keys on the keyboard. 
+					W or up arrow is for jumping, 
+					S or down arrow is for passing down through platforms. Bullets are fired using the space bar or Enter key
+					The enemies are goblins. They walk back and forth between their range and randomly change directions, jump and pass down through platforms.
+					Contact with goblins will damage the player. Goblins are eliminated after they are shot four times. 1 second of invincibility is given to the player after losing HP or when a goblin spawns.</p>
+					<br/>
+					<h3>Survival</h3>
+					<img src="images/GoblinShooterSurvival.png"/>
+					<p>In Survival mode, the player will die after one contact with a goblin. Each shot that hits a goblin scores 1 point. The spawn rate of the goblins increases depending on the score,
+					with a maximum rate of a spawn every 2 seconds at 60 points. There will be 6 or fewer goblins on the screen at a time. Kill as many goblins as possible until </p>
+					<br/>
+					<h3>Swarm</h3>
+					<img src="images/GoblinShooterSwarm.png"/>
+					<p>In Swarm mode, each contact with a goblin deals 10 damage to the player. Goblins spawn every 3 seconds, with a limit of 6 goblins on the screen at once. Defeat 50 goblins to win.
+					A timer keeps track of how long you took to finish.</p>
+					<br/>
+					<h3>Adventure</h3>
+					<img src="images/GoblinShooterAdventure.png"/>
+					<p>The Adventure mode is a side scrolling platformer. The player needs to navigate the level, collect all gold pieces and kill all goblins before reaching a wooden sign post to win. 
+					Goblins drop a gold piece when they die. There is a timer to keep track of how long you took to finish the level. Each contact with a goblin deals 15 damage. 
+					Falling off the screen will instantly kill the player.</p>
+					<br/>
+					<h3>Platforms</h3>
+					<img src="images/GoblinShooterPlatforms.png"/>
+					<p>On the top left of the image is a platform. You can jump from underneath it. You can also pass down through the platform by pressing down arrow or S while standing or walking.
+					On the bottom right is a cliff. You can walk through the brown area and jump up from underneath onto the green surface, but you cannot pass down through it.</p>
+					
+					<a href="https://1drv.ms/u/s!Arlw0YD7zqYNhyVaKiZpa1y6U0Mb?e=KkdVML" target="_blank"><div id="download"><h2>DOWNLOAD EXE</h2></div></a>
+					<br/>
+					<a href="https://github.com/dkhl65/Goblin-Shooter" target="_blank"><div id="download"><h2>SOURCE CODE</h2></div></a>
+					<h3>Instructions for Windows</h3>
+					<ol>
+						<li>Click on the DOWNLOAD EXE button and wait for the download to begin</li>
+						<li>Save Goblin Shooter.zip to your computer</li>
+						<li>Right click the file and select "Extract all..." to extract the files</li>
+						<li>Open Goblin Shooter.exe</li>
+					</ol>
+					<h3>Instructions for Linux</h3>
+					<ol>
+						<li>Click on the SOURCE CODE button to see the GitHub page</li>
+						<li>Clone the repository or download a zip</li>
+						<li>Make sure to have Pygame installed using pip</li>
+						<li>Execute Game.py</li>
+					</ol>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
