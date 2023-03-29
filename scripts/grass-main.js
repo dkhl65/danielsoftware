@@ -2,7 +2,11 @@ $(document).ready(() => {
 	// create the 50x50 plain dark background
 	for(let i = 0; i < 50; i++) {
 		for(let j = 0; j < 50; j++) {
-			$("#editor-div").append('<img class="grass-img" src="images/grass/dark.png"></img>');
+			if (i % 2 === 0 && j % 2 !== 0 || i % 2 !== 0 && j % 2 === 0) {
+				$("#editor-div").append('<img class="light grass-img" src="images/grass/light.png"></img>');
+			} else {
+				$("#editor-div").append('<img class="dark grass-img" src="images/grass/dark.png"></img>');
+			}
 		}
 		$("#editor-div").append("<br>");
 	}
@@ -11,11 +15,16 @@ $(document).ready(() => {
 	
 	// deploy or reclaim individual grass tiles by clicking
 	$(".grass-img").click((ev) => {
-		if ($(ev.target).prop("src").indexOf("dark.png") >= 0 && grassDeployed < 50) {
+		const src = $(ev.target).prop("src");
+		if ((src.indexOf("dark.png") >= 0 || src.indexOf("light.png") >= 0) && grassDeployed < 50) {
 			$(ev.target).prop("src", "images/grass/grass.png");
 			grassDeployed++;
-		} else if($(ev.target).prop("src").indexOf("grass.png") >= 0) {
-			$(ev.target).prop("src", "images/grass/dark.png");
+		} else if(src.indexOf("grass.png") >= 0) {
+			if ($(ev.target).prop("class").indexOf("dark") >= 0) {
+				$(ev.target).prop("src", "images/grass/dark.png");
+			} else {
+				$(ev.target).prop("src", "images/grass/light.png");
+			}
 			grassDeployed--;
 		}
 		$("#remaining-grass-text").text(50 - grassDeployed);
@@ -30,7 +39,8 @@ $(document).ready(() => {
 	
 	// hold middle mouse button and drag to deploy grass continuously
 	$(".grass-img").on("mousemove", (ev) => {
-		if(ev.which === 2 && $(ev.target).prop("src").indexOf("dark.png") >= 0 && grassDeployed < 50) {
+		const src = $(ev.target).prop("src");
+		if(ev.which === 2 && (src.indexOf("dark.png") >= 0 || src.indexOf("light.png") >= 0) && grassDeployed < 50) {
 			$(ev.target).prop("src", "images/grass/grass.png");
 			grassDeployed++;
 		}
@@ -40,7 +50,8 @@ $(document).ready(() => {
 	// press space bar to reclaim all grass tiles
 	$("body").keypress((ev) => {
 		if(ev.which === 32) {
-			$(".grass-img").prop("src", "images/grass/dark.png");
+			$(".dark").prop("src", "images/grass/dark.png");
+			$(".light").prop("src", "images/grass/light.png");
 			grassDeployed = 0;
 			ev.preventDefault();
 		}
