@@ -1,98 +1,113 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Pokemon Team Type Calculator</title>
-		<link rel="stylesheet" type="text/css" href="styles/pokemon-style.css"/>
-		<link rel="shortcut icon" href="images/icons/normal.png"/>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-		<script src="scripts/pokemon-header.js"></script>
-		<script src="scripts/pokemon-main.js"></script>
-	</head>
-	<body>
-		<h1>Pokemon Team Type Calculator</h1>
-		<a href="index.html">By Daniel Liang</a>
-		<button id="help-button">Show Help</button>
-		<div id="help-div" hidden>
-			<p>
-				In the Pokemon column, select the types of the Pokemon in your party and their abilities if they affect type matchups.
-			</p>
-			<p>
-				In the Attacks column, select the types of damaging moves that your Pokemon have. Freeze-Dry and Thousand Arrows are unique attacks with special type matchups.
-			</p>
-			<p>
-				The Ineffective Coverage column shows the type combinations that resist or are immnune to all your Pokemon's attacks.
-				If single type symbols are shown, it means that the Pokemon cannot do neutral or better damage to that type and combinations of those types.
-				For example, if your Pokemon only knows Dark attacks, Fighting, Dark and Fairy symbols are shown, but it is also not very effective against Fighting-Dark, Water-Dark, etc.
-				Specific type combination symbols may be shown, which look like half of each type symbol together.
-				For example, if you Pokemon knows Electric and Ice attacks, it will be fine against Electric opponents and Steel opponents, but is not very effective against Electric-Steel opponents.
-			</p>
-			<p>
-				The Weaknesses column show the types that do super effective damage on your Pokemon.
-			</p>
-			<p>
-				The Resistances and Immunities column show types that are not very effective or do not affect your Pokemon. "Im" stands for "Immune". 
-				In the total row, if you team has immunities, the number of resistances and immunites are shown in the format of "number of resistances + number of immunities".
-			</p>
-		</div>
-		<table>
-			<tr>
-				<th>Pokemon</th>
-				<th>Attacks</th>
-				<th>Ineffective Coverage</th>
-				<th>Weaknesses</th>
-				<th>Resistances and Immunities</th>
-			</tr>
-			<tr class="pokemon-row">
-				<td class="type-column">
-					<label>Type 1: </label>
-					<select class="type-select">
-						<option value="-1">-</option>
-					</select>
-					<br>
-					<label>Type 2: </label>
-					<select class="type-select">
-						<option value="-1">-</option>
-					</select>
-					<br>
-					<label>Ability: </label>
-					<select class="ability-select">
-						<option value="-1">Other</option>
-					</select>
-					<br>
-					<label><input type="checkbox" class="ignore-checkbox">Ignore this row in total</label>
-					<br>
-					<button class="reset-button">Reset</button>
-				</td>
-				<td class="attack-column">
-					<select class="attack-select">
-						<option value="-1">-</option>
-					</select>
-					<br>
-					<select class="attack-select">
-						<option value="-1">-</option>
-					</select>
-					<br>
-					<select class="attack-select">
-						<option value="-1">-</option>
-					</select>
-					<br>
-					<select class="attack-select">
-						<option value="-1">-</option>
-					</select>
-				</td>
-				<td class="coverage-column"></td>
-				<td class="weaknesses-column type-chart"></td>
-				<td class="resistances-column type-chart"></td>
-			</tr>
-			<tr id="total-row">
-				<td colspan="2">
-					<h2>Total</h2>
-					<button id="reset-all-button">Reset All</button>
-				</td>
-				<td class="coverage-column"></td>
-				<td class="weaknesses-column type-chart"></td>
-				<td class="resistances-column type-chart"></td>
-			</tr>
-		</table>
-	</body>
+  <head>
+    <title>Pokemon Team Type Calculator</title>
+    <link rel="stylesheet" type="text/css" href="styles/pokemon-style.css" />
+    <link rel="shortcut icon" href="images/icons/normal.png" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="scripts/pokemon-header.js"></script>
+    <script src="scripts/pokemon-main.js"></script>
+  </head>
+  <body>
+    <h1>Pokemon Team Type Calculator</h1>
+    <a href="index.html">By Daniel Liang</a>
+    <button id="help-button">Show Help</button>
+    <div id="help-div" hidden>
+      <p>
+        In the Pokemon column, select the types of the Pokemon in your party and
+        their abilities if they affect type matchups.
+      </p>
+      <p>
+        In the Attacks column, select the types of damaging moves that your
+        Pokemon have. Freeze-Dry and Thousand Arrows are unique attacks with
+        special type matchups.
+      </p>
+      <p>
+        The Ineffective Coverage column shows the type combinations that resist
+        or are immnune to all your Pokemon's attacks. If single type symbols are
+        shown, it means that the Pokemon cannot do neutral or better damage to
+        that type and combinations of those types. For example, if your Pokemon
+        only knows Dark attacks, Fighting, Dark and Fairy symbols are shown, but
+        it is also not very effective against Fighting-Dark, Water-Dark, etc.
+        Specific type combination symbols may be shown, which look like half of
+        each type symbol together. For example, if you Pokemon knows Electric
+        and Ice attacks, it will be fine against Electric opponents and Steel
+        opponents, but is not very effective against Electric-Steel opponents.
+      </p>
+      <p>
+        The Weaknesses column show the types that do super effective damage on
+        your Pokemon.
+      </p>
+      <p>
+        The Resistances and Immunities column show types that are not very
+        effective or do not affect your Pokemon. "Im" stands for "Immune". In
+        the total row, if you team has immunities, the number of resistances and
+        immunites are shown in the format of "number of resistances + number of
+        immunities".
+      </p>
+    </div>
+    <table>
+      <tr>
+        <th>Pokemon</th>
+        <th>Attacks</th>
+        <th>Ineffective Coverage</th>
+        <th>Weaknesses</th>
+        <th>Resistances and Immunities</th>
+      </tr>
+      <tr class="pokemon-row">
+        <td class="type-column">
+          <label>Type 1: </label>
+          <select class="type-select">
+            <option value="-1">-</option>
+          </select>
+          <br />
+          <label>Type 2: </label>
+          <select class="type-select">
+            <option value="-1">-</option>
+          </select>
+          <br />
+          <label>Ability: </label>
+          <select class="ability-select">
+            <option value="-1">Other</option>
+          </select>
+          <br />
+          <label
+            ><input type="checkbox" class="ignore-checkbox" />Ignore this row in
+            total</label
+          >
+          <br />
+          <button class="reset-button">Reset</button>
+        </td>
+        <td class="attack-column">
+          <select class="attack-select">
+            <option value="-1">-</option>
+          </select>
+          <br />
+          <select class="attack-select">
+            <option value="-1">-</option>
+          </select>
+          <br />
+          <select class="attack-select">
+            <option value="-1">-</option>
+          </select>
+          <br />
+          <select class="attack-select">
+            <option value="-1">-</option>
+          </select>
+        </td>
+        <td class="coverage-column"></td>
+        <td class="weaknesses-column type-chart"></td>
+        <td class="resistances-column type-chart"></td>
+      </tr>
+      <tr id="total-row">
+        <td colspan="2">
+          <h2>Total</h2>
+          <button id="reset-all-button">Reset All</button>
+        </td>
+        <td class="coverage-column"></td>
+        <td class="weaknesses-column type-chart"></td>
+        <td class="resistances-column type-chart"></td>
+      </tr>
+    </table>
+  </body>
 </html>

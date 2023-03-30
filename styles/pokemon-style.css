@@ -1,91 +1,94 @@
 body {
-	font-family: "Arial", Gadget, sans-serif;
-	background-color: #ffffff;
+  font-family: "Arial", Gadget, sans-serif;
+  background-color: #ffffff;
 }
 td {
-	padding: 5px;
+  padding: 5px;
 }
 th {
-	position: sticky;
-	top: 0;
-	background-color: #eeeeee;
-	padding: 5px;
+  position: sticky;
+  top: 0;
+  background-color: #eeeeee;
+  padding: 5px;
 }
 tr {
-	background-color: #eeeeff;
+  background-color: #eeeeff;
 }
 select {
-	margin: 3px;
+  margin: 3px;
 }
 label {
-	font-size: 10pt;
+  font-size: 10pt;
 }
 button {
-	margin: 3px;
+  margin: 3px;
 }
 .matchup-span {
-	width: 36px;
-	height: 36px;
-	display: inline-block;
-	position: relative;
-	margin: 5px;
+  width: 36px;
+  height: 36px;
+  display: inline-block;
+  position: relative;
+  margin: 5px;
 }
 .matchup-img {
-	width: 36px;
-	height: 36px;
-	opacity: 0.1;
+  width: 36px;
+  height: 36px;
+  opacity: 0.1;
 }
 .icon-label {
-	color: white;
-	text-shadow: 1px 1px black, -1px -1px black, 1px -1px black, -1px 1px black, 1px 0px black, -1px 0px black, 0px 1px black, 0px -1px black;
-	position: absolute;
-	text-align: center;
-	top: 10px;
-	right: 0px;
-	display: inline-block;
-	width: 100%;
+  color: white;
+  text-shadow: 1px 1px black, -1px -1px black, 1px -1px black, -1px 1px black,
+    1px 0px black, -1px 0px black, 0px 1px black, 0px -1px black;
+  position: absolute;
+  text-align: center;
+  top: 10px;
+  right: 0px;
+  display: inline-block;
+  width: 100%;
 }
 .coverage-div {
-	display: inline-block;
+  display: inline-block;
 }
 .coverage-span {
-	width: 18px;
-	height: 36px;
-	position: relative;
-	display: inline-block;
-	overflow: hidden;
+  width: 18px;
+  height: 36px;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
 }
 .coverage-img {
-	width: 36px;
-	height: 36px;
+  width: 36px;
+  height: 36px;
 }
 .left-coverage-img {
-	width: 36px;
-	height: 36px;
-	position: absolute;
-	top: 0;
-	left: 0;
+  width: 36px;
+  height: 36px;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .right-coverage-img {
-	width: 36px;
-	height: 36px;
-	margin-left: -18px;
-	position: absolute;
-	top: 0;
-	left: 0;
+  width: 36px;
+  height: 36px;
+  margin-left: -18px;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .type-column {
-	min-width: 170px;
+  min-width: 170px;
 }
 .type-chart {
-	min-width: 276px;
+  min-width: 276px;
 }
-.weaknesses-column, .resistances-column, .coverage-column {
-	text-align: center;
+.weaknesses-column,
+.resistances-column,
+.coverage-column {
+  text-align: center;
 }
 #total-row {
-	background-color: #feddff;
+  background-color: #feddff;
 }
 #help-div {
-	max-width: 1000px;
+  max-width: 1000px;
 }
