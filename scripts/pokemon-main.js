@@ -107,7 +107,7 @@ $(document).ready(() => {
         if (
           (ability >= 8 && ability <= 10 && i === TYPES.indexOf("fire")) ||
           (ability === ABILITIES.indexOf("Thick Fat") &&
-            i === TYPES.indexOf("ice")) ||
+            (i === TYPES.indexOf("fire") || i === TYPES.indexOf("ice"))) ||
           (ability === ABILITIES.indexOf("Purifying Salt") &&
             i === TYPES.indexOf("ghost"))
         ) {
